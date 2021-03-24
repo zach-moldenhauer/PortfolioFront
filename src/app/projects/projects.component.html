@@ -1,0 +1,37 @@
+<div class="projectGrid">
+
+		<div class="project" *ngFor="let item of a">
+			<div class="projectTop">
+				<img [src]="orange">
+			</div>
+			<div class="projectBottom">
+				{{item}}
+				<a href="">View</a>
+			</div>
+		</div>
+
+</div>
+<app-empty-page *ngIf="emptyPage"></app-empty-page>
+
+
+
+
+
+
+<!--
+
+
+	<div>
+        <p>City: {{obj.name}}</p>
+
+        <p>Temp: {{obj.cod}}</p>
+
+        <p>Error: {{error}}</p>
+        <p *ngIf="errorMessage">Error Recieving Weather</p>
+	</div>
+-->
+
+
+
+
+

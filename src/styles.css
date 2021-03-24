@@ -1,1 +1,239 @@
 /* You can add global styles to this file, and also import other style files */
+
+p {
+	font-family: Arial, Helvetica, sans-serif;
+	padding: 5%;
+
+}
+
+h1 {
+
+	font-family: Arial, Helvetica, sans-serif;
+	
+	
+
+
+}
+
+
+body {
+	background: #ddd;
+
+}
+
+a {
+	color: black;
+	text-decoration: none;
+
+}
+
+a:active {
+	color: rgb(190,180,140);
+
+}
+
+
+span {
+	color: rgb(61, 135, 69)
+
+
+}
+
+
+.navButton {
+	display: none;
+
+}
+
+.hamburgerNavButton {
+	
+	
+
+	display: block;
+	background: white;
+	
+	padding-left: 5%;
+	padding-top: 10%;
+	padding-bottom: 10%;
+	padding-right: 110%;
+
+	margin: 5%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 125%;
+	text-align: center;
+	border-radius: 25%;
+	
+	
+	
+
+	
+}
+
+.hamburgerFormat {
+	display: flex;
+	flex-direction: column;
+	
+}
+
+#hamburgerIcon {
+	display: flex;
+	width: 15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	border-radius:10%;
+
+}
+
+
+
+.sideBySide {
+	display: flex;
+	flex-direction: column;
+
+}
+
+
+.navbar {
+	background: rgb(245,222,179);
+   
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+
+    
+    justify-content: space-between;
+
+
+}
+
+.navLeft {
+	display: flex;
+
+
+}
+
+.navRight {
+	display: inline-block;
+
+
+}
+
+.navRightTop {
+	display: flex;
+	
+	justify-content: flex-end;
+
+
+
+
+}
+
+.navRightBottom {
+
+
+}
+
+.navRightBottomRight {
+	display: flex;
+	justify-content: flex-end;
+}
+
+
+
+
+
+
+
+.pageBody {
+	display: flex;
+	margin-bottom: 1%;
+	margin-top: 1%;
+	padding: 5%;
+	background: white;
+	min-height: 500px;
+
+
+}
+
+.pagePadding {
+    margin-left: 0%;
+    margin-right: 0%;
+
+}
+
+.footer {
+	background: rgb(190,180,140);
+	min-height: 100px;
+	text-align: center;
+	padding: 5%;
+
+}
+
+
+
+
+/* for screens 1000px and larger */
+@media screen and (min-width: 1000px) {
+
+
+	.navbar {
+		background: rgb(245,222,179);
+	    display: flex;
+	    
+	}
+
+	.navLeft {
+		display: flex;
+		
+	}
+
+	.navRight {
+		display: flex;
+		align-items: flex-end;
+
+	}
+
+	.navButton {
+		display: flex;
+		padding: 5%;
+		background: white;
+		margin: 5%;
+
+		font-family: Arial, Helvetica, sans-serif;
+
+		font-size: 125%;
+		border-radius: 25%;
+
+	}
+
+	.hamburgerNavButton {
+		display: none;
+
+	}
+
+
+	.sideBySide {
+		display: flex;
+		flex-direction: row;
+
+	}
+
+
+	#hamburgerIcon {
+		display: none;
+
+	}
+
+	
+
+
+	.pagePadding {
+	    margin-left: 10%;
+	    margin-right: 10%;
+
+	}
+}
+
+
+
+

@@ -1,0 +1,11 @@
+
+
+#profilePicture {
+	width: 15%;
+	border: solid;
+	align-self: center;
+	border-color: rgb(190,180,140);
+	border-width: 1%;
+	border-radius: 25%;
+}
+

@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "portfolio-front"
+  "defaultProject": "portfolio-front",
+  "cli": {
+    "packageManager": "npm"
+  }
 }

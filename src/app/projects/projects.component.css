@@ -1,0 +1,43 @@
+img {
+	max-width: 100%;
+	height: auto;
+
+}
+
+.projectGrid {
+	display: inline-flex;
+	flex-direction: row;
+	overflow-wrap: wrap;
+
+
+}
+
+.project {
+	display:flex;
+
+
+	background-color: rgb(190,180,140);
+	flex-direction: column;
+	margin: 1%;
+
+}
+
+.projectTop {
+	background-color: rgb(190,180,140);
+
+}
+
+.projectBottom {
+	background-color: rgb(190,180,140);
+
+}
+
+
+/* for screens 1000px and larger */
+@media screen and (min-width: 1000px) {
+
+
+
+}
+
+

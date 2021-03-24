@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio-front';
+
+
+  
+  isClicked: boolean = false;
+  onClick() {
+
+  	if(this.isClicked) {
+  		this.isClicked = false;
+
+  	} else {
+  		this.isClicked = true;
+
+  	}
+  }
+
+
+
+
 }
