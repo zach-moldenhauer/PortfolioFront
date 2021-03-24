@@ -6,6 +6,8 @@ export class AdminService {
   constructor() { }
 
 
+  
+
   validateLogin(object: Object):boolean {
   	return false;
   }

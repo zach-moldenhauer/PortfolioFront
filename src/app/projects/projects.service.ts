@@ -32,6 +32,6 @@ export class ProjectsService {
 
 	getProjects() {
 
-		return this.http.get("https://community-open-weather-map.p.rapidapi.com/weather/?rapidapi-key=fd5a6e0aeamsh4a04cfb9365a955p12a28fjsn560ca8ebd8d1&q=London,uk");
+		
 	}
 }
