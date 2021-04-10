@@ -7,9 +7,10 @@ import { catchError, retry } from 'rxjs/operators';
 
 
 
-export interface WeatherObject {
-	name: string;
-	cod: string;
+export interface ProjectObject {
+	id: string;
+	title: string;
+	text_body: string;
 
 }
 
@@ -31,6 +32,12 @@ export class ProjectsService {
 	
 
 	getProjects() {
+		return this.http.get("api/project/3", {
+
+			observe: 'body',
+			responseType: 'json'
+
+		});
 
 		
 	}

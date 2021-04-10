@@ -1,16 +1,16 @@
 <div class="projectGrid">
 
-		<div class="project" *ngFor="let item of a">
-			<div class="projectTop">
-				<img [src]="orange">
-			</div>
+		<div class="project" *ngIf="projectObject" >
+			
 			<div class="projectBottom">
-				{{item}}
+				<a>{{projectObject.text_body}}</a>
 				<a href="">View</a>
 			</div>
 		</div>
 
 </div>
+
+<button (click)="getInfo()" >test</button>
 <app-empty-page *ngIf="emptyPage"></app-empty-page>
 
 
@@ -29,6 +29,8 @@
         <p>Error: {{error}}</p>
         <p *ngIf="errorMessage">Error Recieving Weather</p>
 	</div>
+
+
 -->
 
 

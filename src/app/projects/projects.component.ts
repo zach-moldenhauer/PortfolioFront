@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProjectsService, WeatherObject, ErrorObject} from './projects.service';
+import { ProjectsService, ProjectObject, ErrorObject} from './projects.service';
 
 @Component({
   selector: 'app-projects',
@@ -12,7 +12,8 @@ import { ProjectsService, WeatherObject, ErrorObject} from './projects.service';
 
 export class ProjectsComponent implements OnInit {
   error: any;
-  obj: WeatherObject;
+
+  projectObject: ProjectObject;
 
   errorMessage: boolean;
   emptyPage: boolean;
@@ -33,7 +34,7 @@ export class ProjectsComponent implements OnInit {
   ngOnInit() {
     this.emptyPage = false;
 
-    if(!this.a){
+    if(!this.array){
       this.emptyPage = true;
 
     }
@@ -46,32 +47,25 @@ export class ProjectsComponent implements OnInit {
   getInfo() {
 
 
-  	
 
 
-  
+    this.projectsService.getProjects().subscribe(
+      (data: ProjectObject) => this.projectObject = {
+        id: data.id,
+        title: data.title,
+        text_body: data.text_body
 
-  	this.projectsService.getProjects().subscribe(
-  			(data: WeatherObject) => this.obj = { ...data },
-  			error => this.error = error
+      }
+
+
+    );
+
+  	// this.projectsService.getProjects().subscribe(
+  	// 		(data: WeatherObject) => this.obj = { ...data },
+  	// 		error => this.error = error
   		
 
-  		);
-
-  	
-
-
-
-  	
-  	
-
-
+  	// 	);
 
   }
-
-  
-
-
-  
-
 }
