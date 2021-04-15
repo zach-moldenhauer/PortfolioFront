@@ -32,13 +32,11 @@ export class ProjectsService {
 	
 
 	getProjects() {
-		return this.http.get("api/project/3", {
+		return this.http.get("api/project", {
 
 			observe: 'body',
 			responseType: 'json'
 
 		});
-
-		
 	}
 }

@@ -13,7 +13,7 @@ import { ProjectsService, ProjectObject, ErrorObject} from './projects.service';
 export class ProjectsComponent implements OnInit {
   error: any;
 
-  projectObject: ProjectObject;
+  projectObject: ProjectObject[] = [];
 
   errorMessage: boolean;
   emptyPage: boolean;
@@ -44,28 +44,18 @@ export class ProjectsComponent implements OnInit {
 
   }
 
-  getInfo() {
+  getProjectArray() {
 
 
 
 
     this.projectsService.getProjects().subscribe(
-      (data: ProjectObject) => this.projectObject = {
-        id: data.id,
-        title: data.title,
-        text_body: data.text_body
+      (data: any) => {
+        this.projectObject = data;
 
       }
 
 
     );
-
-  	// this.projectsService.getProjects().subscribe(
-  	// 		(data: WeatherObject) => this.obj = { ...data },
-  	// 		error => this.error = error
-  		
-
-  	// 	);
-
   }
 }

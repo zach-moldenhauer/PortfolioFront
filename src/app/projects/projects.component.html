@@ -1,16 +1,17 @@
 <div class="projectGrid">
 
-		<div class="project" *ngIf="projectObject" >
+		<div class="project" *ngFor="let loop of projectObject" >
 			
+			<img src="assets/images/alaska.jpg">
 			<div class="projectBottom">
-				<a>{{projectObject.text_body}}</a>
+				{{loop.title}}
 				<a href="">View</a>
 			</div>
 		</div>
 
 </div>
 
-<button (click)="getInfo()" >test</button>
+<button (click)="getProjectArray()" >test</button>
 <app-empty-page *ngIf="emptyPage"></app-empty-page>
 
 
