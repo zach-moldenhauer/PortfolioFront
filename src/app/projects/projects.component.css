@@ -6,7 +6,7 @@ img {
 
 .projectGrid {
 	display: inline-flex;
-	flex-direction: row;
+	flex-direction: column;
 	overflow-wrap: wrap;
 
 
@@ -19,6 +19,8 @@ img {
 	background-color: rgb(190,180,140);
 	flex-direction: column;
 	margin: 1%;
+	padding: 1%;
+	border-radius: 1%;
 
 }
 
@@ -29,6 +31,19 @@ img {
 
 .projectBottom {
 	background-color: rgb(190,180,140);
+	flex-direction: row;
+
+}
+
+.button {
+	display: flex;
+	background: white;
+	text-align: center;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	
+	
 
 }
 

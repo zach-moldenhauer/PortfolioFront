@@ -1,40 +1,12 @@
 <div class="projectGrid">
 
-		<div class="project" *ngFor="let loop of projectObject" >
+		<div class="project" *ngFor="let loop of projectObjects; index as index" >
 			
 			<img src="assets/images/alaska.jpg">
 			<div class="projectBottom">
-				{{loop.title}}
-				<a href="">View</a>
+				<h1>{{loop.title}}</h1>
+				<a class="button" [routerLink]="['/project', index]">View</a>
 			</div>
 		</div>
 
 </div>
-
-<button (click)="getProjectArray()" >test</button>
-<app-empty-page *ngIf="emptyPage"></app-empty-page>
-
-
-
-
-
-
-<!--
-
-
-	<div>
-        <p>City: {{obj.name}}</p>
-
-        <p>Temp: {{obj.cod}}</p>
-
-        <p>Error: {{error}}</p>
-        <p *ngIf="errorMessage">Error Recieving Weather</p>
-	</div>
-
-
--->
-
-
-
-
-

@@ -11,6 +11,7 @@ import { EmptyPageComponent } from './empty-page/empty-page.component';
 import { AdminComponent } from './admin/admin.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AdminService } from './admin/admin.service';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 const routes: Routes = [];
 
@@ -21,7 +22,8 @@ const routes: Routes = [];
     ProjectsComponent,
     MenuComponent,
     EmptyPageComponent,
-    AdminComponent
+    AdminComponent,
+    ProjectPageComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +33,7 @@ const routes: Routes = [];
     	{ path: 'about', component: AboutComponent},
       { path: 'admin', component: AdminComponent},
     	{ path: 'projects', component: ProjectsComponent },
+      { path: 'project/:id', component: ProjectPageComponent},
       { path: 'menu', component: MenuComponent, outlet: 'menuOutlet'}
     ])
 

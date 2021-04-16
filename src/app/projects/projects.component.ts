@@ -11,17 +11,12 @@ import { ProjectsService, ProjectObject, ErrorObject} from './projects.service';
 
 
 export class ProjectsComponent implements OnInit {
-  error: any;
 
-  projectObject: ProjectObject[] = [];
+  projectObjects: ProjectObject[] = [];
 
-  errorMessage: boolean;
-  emptyPage: boolean;
-
+  //test array
   array: string[] = ["apple", "orange","pear","a","b","c"];
-  a: string[];
 
- 
   apple = "../assets/images/alaska.jpg";
   orange = "../assets/images/skiiing.jpg"
 
@@ -32,30 +27,24 @@ export class ProjectsComponent implements OnInit {
   constructor(private projectsService: ProjectsService) {}
 
   ngOnInit() {
-    this.emptyPage = false;
+    
+    this.projectsService.getProjects().subscribe(
+      (data: any) => {
+        this.projectObjects = data;
 
-    if(!this.array){
-      this.emptyPage = true;
-
-    }
-   
-
-  	
+      }
+    );
 
   }
 
-  getProjectArray() {
 
+  ngAfterViewChecked() {
 
+    try {
+      localStorage.setItem("projectArray", JSON.stringify(this.projectObjects));
+    } catch(error) {
+      console.log(error);
+    }
 
-
-    this.projectsService.getProjects().subscribe(
-      (data: any) => {
-        this.projectObject = data;
-
-      }
-
-
-    );
   }
 }
